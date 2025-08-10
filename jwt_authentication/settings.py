@@ -100,14 +100,14 @@ REST_FRAMEWORK = {
     )
 }
 
-# Simple JWT Configuration
+# Simple JWT Configuration/Settings
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=5),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
 
     "ALGORITHM": "HS256",
-    "SIGNING_KEY": SECRET_KEY,
-    "VERIFYING_KEY": "",
+    "SIGNING_KEY": SECRET_KEY, # private key
+    "VERIFYING_KEY": "",       # public key (not useful in symmetric encryption algorithm)
 }
 
 
@@ -136,6 +136,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CORS Header Configuration
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000", # React application
-    "http://127.0.0.1:3000", # React application 
+    # React applications
+    "http://localhost:3000", 
+    "http://127.0.0.1:3000", 
 ]
