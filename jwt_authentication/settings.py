@@ -75,6 +75,9 @@ DATABASES = {
     }
 }
 
+# custome user model 
+AUTH_USER_MODEL = 'account.User' # Must need to be set before the first migrations
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
